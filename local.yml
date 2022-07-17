@@ -2,5 +2,6 @@
 - hosts: localhost
   become: false
   vars:
-    homebrew_installed_packages:
+    brew_packages: 
       - htop
+    install_homebrew_if_missing: false
