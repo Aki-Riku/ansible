@@ -12,8 +12,7 @@
     when: ansible_distribution == "Ubuntu"
 
   tasks:
-  - name: Install packages with brew
-    become: yes
+  - become: yes
     community.general.homebew:
       name:
         - htop
