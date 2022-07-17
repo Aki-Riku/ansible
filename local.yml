@@ -5,13 +5,13 @@
   become: false
   
   tasks:
-  - name: "just execute a ls -lrt command"
-    shell: "ls -lrt"
-    register: "output"
-  - debug: var=output.stdout_lines
+    - name: "just execute a ls -lrt command"
+      shell: "ls -lrt"
+      register: "output"
+    - debug: var=output.stdout_lines
   
-  - name: "installs program"
-    homebrew:
-      name: htop
-      state: present
+    - name: "installs program"
+      homebrew:
+        name: htop
+        state: present
       
