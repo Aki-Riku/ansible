@@ -5,7 +5,6 @@
 
   tasks:
   - name: install packages
-    become: false
     package:
       name:
         - htop
