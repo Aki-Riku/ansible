@@ -1,6 +1,7 @@
 ---
 - name: testin
   hosts: localhost
+  connection: local
   become: false
   vars:
     Brew_packages: 
