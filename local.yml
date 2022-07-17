@@ -10,5 +10,6 @@
   - debug: var=output.stdout_lines
   
   - name: "installs program"
+    become: no
     package:
       name: htop
