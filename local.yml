@@ -1,10 +1,10 @@
 ---
-- name: Install Homebrew Packages
-  hosts: localhost
+- hosts: localhost
   connection: local
-  become: false
-  vars:
-    homebrew:
+  become: true
+
+  tasks:
+  - name: install packages
+    package:
       name:
         - htop
-      state: present
