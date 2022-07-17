@@ -2,6 +2,7 @@
 - name: "Playing with Ansible and Git"
   hosts: localhost
   connection: local 
+  become: false
   
   tasks:
   - name: "just execute a ls -lrt command"
@@ -10,6 +11,5 @@
   - debug: var=output.stdout_lines
   
   - name: "installs program"
-    become: no
     package:
       name: htop
