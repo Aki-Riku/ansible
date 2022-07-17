@@ -13,5 +13,5 @@
   - name: "installs program"
     homebrew:
       name: htop
-      state: latest
+      state: present
       
