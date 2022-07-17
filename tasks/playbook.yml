@@ -1,0 +1,6 @@
+- name: Setup
+  hosts: localhost
+  become: yes
+  brew_packages:
+    name: "{{ packages }}"
+    state: latest
