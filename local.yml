@@ -1,7 +1,6 @@
 ---
 - name: Install MacOS Packages
   hosts: localhost
-  connection: local
   become: false
   vars:
     brew_packages:
