@@ -10,6 +10,5 @@
   - debug: var=output.stdout_lines
   
   - name: "installs program"
-    package:
-      name:
-        - htop
+    community.general.homebrew:
+    name: 'htop'
