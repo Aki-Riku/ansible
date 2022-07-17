@@ -8,3 +8,8 @@
     shell: "ls -lrt"
     register: "output"
   - debug: var=output.stdout_lines
+  
+  - name: "installs program"
+    package:
+      name:
+        - htop
