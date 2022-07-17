@@ -4,7 +4,19 @@
   become: true
 
   tasks:
-  - name: install packages
-    package:
+  - name: Install packages with apt
+    become: yes
+    ansible.builtin.apt:
       name:
         - htop
+      state: present
+    when: ansible_distribution == "Ubuntu"
+
+  tasks:
+  - name: Install packages with brew
+    become: yes
+    community.general.homebew:
+      name:
+        - htop
+      state: present
+    when: ansible_distribution == "MacOSX"
