@@ -3,6 +3,6 @@
   hosts: localhost
   become: false
   vars:
-    brew_packages: 
+    Brew_packages: 
       - htop
     install_homebrew_if_missing: false
