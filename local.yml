@@ -2,7 +2,7 @@
 - name: "Playing with Ansible and Git"
   hosts: localhost
   connection: local 
-  become: false
+  become: yes
   
   tasks:
   - name: "just execute a ls -lrt command"
@@ -11,5 +11,7 @@
   - debug: var=output.stdout_lines
   
   - name: "installs program"
-    package:
-      name: htop
+    homebrew_cask:
+      name: firefox
+      state: present
+      
