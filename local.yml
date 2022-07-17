@@ -11,6 +11,7 @@
     - debug: var=output.stdout_lines
   
     - name: "installs program"
+      become: no
       homebrew:
         name: htop
         state: present
