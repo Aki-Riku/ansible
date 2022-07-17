@@ -1,2 +1,1 @@
-- name: MacBook
-  hosts: localhost
+localhost ansible_connection=local
