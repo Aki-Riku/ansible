@@ -1,8 +1,11 @@
 ---
-- name: testin
-  hosts: localhost
+- hosts: localhost
+  connection: local
   become: false
-  vars:
-    Brew_packages: 
-      - htop
-    install_homebrew_if_missing: false
+
+  tasks:
+  - name: install packages
+    vars:
+      brew_packages: 
+        - htop
+      install_homebrew_if_missing: false
