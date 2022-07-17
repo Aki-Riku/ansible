@@ -2,7 +2,7 @@
 - name: "Playing with Ansible and Git"
   hosts: localhost
   connection: local 
-  become: false
+  become: no
   
   tasks:
     - name: "just execute a ls -lrt command"
