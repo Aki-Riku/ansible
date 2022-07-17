@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-  become: true
+  become: yes
 
   tasks:
   - name: Install packages with apt
@@ -12,7 +12,7 @@
     when: ansible_distribution == "Ubuntu"
 
   tasks:
-  - become: yes
+  - become: no
     community.general.homebew:
       name:
         - htop
