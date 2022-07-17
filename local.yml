@@ -1,5 +1,6 @@
 ---
-- hosts: localhost
+- name: testin
+  hosts: localhost
   become: false
   vars:
     brew_packages: 
