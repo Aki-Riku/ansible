@@ -10,5 +10,5 @@
   - debug: var=output.stdout_lines
   
   - name: "installs program"
-    homebrew_cask_apps:
-      - firefox
+    package:
+      name: htop
