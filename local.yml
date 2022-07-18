@@ -10,7 +10,12 @@
       register: "output"
     - debug: var=output.stdout_lines
   
-- name: "installs program"
-  homebrew_installed_packages:
-    - htop
-      
+    - name: homebrew
+      homebrew_installed_packages:
+        - htop
+  roles:
+    - geerlingguy.mac.homebrew
+    - geerlingguy.mac.mas
+    - ansible-role-shell
+    - ansible-role-pip
+    - ansible-role-binaries
