@@ -1,18 +1,13 @@
 ---
-- name: "Playing with Ansible and Git"
-  hosts: localhost
-  connection: local 
-  become: no
-  
-  tasks:
-    - name: "just execute a ls -lrt command"
-      shell: "ls -lrt"
-      register: "output"
-    - debug: var=output.stdout_lines
-  
-    - name: homebrew
-      homebrew_installed_packages:
-        - htop
+- hosts: localhost
+  connection: local
+  gather_facts: true
+
+    homebrew_installed_packages:
+      - htop
+
+    homebrew_uninstalled_packages: []
+
   roles:
     - geerlingguy.mac.homebrew
     - geerlingguy.mac.mas
