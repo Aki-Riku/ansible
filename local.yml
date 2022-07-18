@@ -1,16 +1,8 @@
 ---
 - hosts: localhost
   connection: local
-  gather_facts: true
-
+  vars:
     homebrew_installed_packages:
       - htop
-
-    homebrew_uninstalled_packages: []
-
   roles:
     - geerlingguy.mac.homebrew
-    - geerlingguy.mac.mas
-    - ansible-role-shell
-    - ansible-role-pip
-    - ansible-role-binaries
