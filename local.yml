@@ -10,7 +10,7 @@
       register: "output"
     - debug: var=output.stdout_lines
   
-    - name: "installs program"
-      homebrew_installed_packages:
-        - htop
+- name: "installs program"
+  homebrew_installed_packages:
+    - htop
       
