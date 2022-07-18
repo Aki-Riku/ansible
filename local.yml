@@ -11,7 +11,6 @@
     - debug: var=output.stdout_lines
   
     - name: "installs program"
-      package:
-        name: htop
-        state: present
+      homebrew_installed_packages:
+        - htop
       
